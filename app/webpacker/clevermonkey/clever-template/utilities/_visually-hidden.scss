@@ -1,0 +1,12 @@
+@import "../helpers/visually-hidden";
+
+@include ct-exports("ct/utilities/visually-hidden") {
+  .visually-hidden {
+    @include visually-hidden;
+  }
+
+  .visually-hidden-focusable {
+    @include visually-hidden-focusable;
+  }
+
+}

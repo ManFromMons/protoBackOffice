@@ -1,0 +1,7 @@
+@import "../helpers/clearfix";
+
+@include ct-exports("ct/utilities/clearfix") {
+  .clearfix {
+    @include clearfix;
+  }
+}

@@ -1,0 +1,24 @@
+//// Module start
+//   An entity that lives in the global namespace CSS namespace
+//   Comprised of components that should be singletons in the output
+
+
+// A list of modules that are already exported
+$_ct-imported-modules: () !default;
+
+//// Export module
+//   This ensures that all modules and components that are defined in the CleverTemplate
+//   are included only 1nce
+
+//   @param {String} name - Name of the module to guard
+//   @content will be passed through only if the module of the same name hasn't already
+//   been output
+
+@mixin ct-exports($name) {
+  @if index($_ct-imported-modules, $name) == null {
+    $_ct-imported-modules: append($_ct-imported-modules, $name) !global;
+    @content;
+  }
+}
+
+

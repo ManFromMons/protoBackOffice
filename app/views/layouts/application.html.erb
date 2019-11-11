@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="clever-template">
+<head>
+  <meta charset="utf-8"/>
+  <title><%= page_title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= yield :meta %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>" type="image/x-icon"/>
+  <link rel="mask-icon" href="<%= image_path('mask-icon.svg') %>" color="#0b0c0c">
+  <% %w[ 180x180 167x167 152x152 ].each do |size| %>
+    <link rel="apple-touch-icon" sizes="<%= size %>" href="<%= image_path("apple-touch-icon-#{size}.png") %>">
+  <% end %>
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> # unless Webpacker.dev_server.hot_module_replacing?  %>
+  <%= yield :css %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script type="application/ecmascript" defer id="page-script">
+    let page_object = function (page_name) {
+      page_object.prototype.name = 'class_page_object';
+      this.page_name = page_name;
+    };
+    page_object.prototype.init = function () {
+      typeof (initialise) === "function" ? initialise.bind(this)() : typeof (this.initialise) === "function" ? this.initialise() : null;
+    }
+  </script>
+  <%= yield :declaration_js %>
+  <script type="application/ecmascript" defer id="page-script">
+    this.pageScope = new page_object(window.location.toString().split("/").pop());
+      this.pageScope.init();
+      <%= yield :init_js %>
+  </script>
+  <script type="application/ecmascript" defer>
+    document.onreadystatechange = () => {
+      switch (document.readyState) {
+        case "interactive":
+          document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+          <%= render partial: '/layouts/init-js' %>
+          break;
+        case "complete":
+
+          break;
+      }
+    };
+  </script>
+</head>
+<body class="right-aside">
+<%= render partial: '/layouts/cookie-banner' %>
+<header class="main" role="banner" data-module="header">
+  <%= render partial: '/layouts/header-banner' %>
+  <%= yield :header %>
+</header>
+<nav>
+  <!-- nav -->
+  <!-- breadcrumb/back -->
+  <%= yield :nav_trail %>
+</nav>
+<section data-moduletype="breadcrumb">
+  <%= yield :content_trail %>
+</section>
+<aside>
+  <%= yield :aside %>
+</aside>
+
+<hgroup>
+  <%= yield :main_heading %>
+</hgroup>
+<main>
+  <%= yield %>
+</main>
+<%= render partial: '/layouts/init-js' %>
+</body>
+<footer>
+  <%= yield :footer %>
+</footer>
+</html>

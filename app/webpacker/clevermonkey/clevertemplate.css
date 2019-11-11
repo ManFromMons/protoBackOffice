@@ -1,0 +1,638 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
+/* line 324, clever-template/vendor/_sass-mq.scss */
+body:before {
+  background-color: #FCF8E3;
+  border-bottom: 1px solid #FBEED5;
+  border-left: 1px solid #FBEED5;
+  color: #C09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+@media (min-width: 16.8421052632em) {
+  /* line 324, clever-template/vendor/_sass-mq.scss */
+  body:before {
+    content: "mobile ≥ 320px (16.8421052632em)";
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 324, clever-template/vendor/_sass-mq.scss */
+  body:before {
+    content: "tablet ≥ 740px (38.9473684211em)";
+  }
+}
+@media (min-width: 51.5789473684em) {
+  /* line 324, clever-template/vendor/_sass-mq.scss */
+  body:before {
+    content: "desktop ≥ 980px (51.5789473684em)";
+  }
+}
+@media (min-width: 68.4210526316em) {
+  /* line 324, clever-template/vendor/_sass-mq.scss */
+  body:before {
+    content: "wide ≥ 1300px (68.4210526316em)";
+  }
+}
+
+/* line 6, clever-template/core/_template.scss */
+html.clever-template {
+  margin: 5px;
+  padding: 0;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  background-color: #F8F9FB;
+  color: #ffffff;
+}
+
+/* line 9, clever-template/core/_typography.scss */
+.template-heading-xl {
+  color: #ffffff;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 32px;
+  font-size: 1.6rem;
+  line-height: 1.09375;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+@media print {
+  /* line 9, clever-template/core/_typography.scss */
+  .template-heading-xl {
+    color: #ffffff;
+  }
+}
+@media print {
+  /* line 9, clever-template/core/_typography.scss */
+  .template-heading-xl {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 9, clever-template/core/_typography.scss */
+  .template-heading-xl {
+    font-size: 48px;
+    font-size: 2.4rem;
+    line-height: 1.0416666667;
+  }
+}
+@media print {
+  /* line 9, clever-template/core/_typography.scss */
+  .template-heading-xl {
+    font-size: 32pt;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 9, clever-template/core/_typography.scss */
+  .template-heading-xl {
+    margin-bottom: 50px;
+  }
+}
+
+/* line 23, clever-template/core/_typography.scss */
+.template-heading-l {
+  color: #ffffff;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 1.2rem;
+  line-height: 1.0416666667;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+@media print {
+  /* line 23, clever-template/core/_typography.scss */
+  .template-heading-l {
+    color: #ffffff;
+  }
+}
+@media print {
+  /* line 23, clever-template/core/_typography.scss */
+  .template-heading-l {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 23, clever-template/core/_typography.scss */
+  .template-heading-l {
+    font-size: 36px;
+    font-size: 1.8rem;
+    line-height: 1.1111111111;
+  }
+}
+@media print {
+  /* line 23, clever-template/core/_typography.scss */
+  .template-heading-l {
+    font-size: 24pt;
+    line-height: 1.05;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 23, clever-template/core/_typography.scss */
+  .template-heading-l {
+    margin-bottom: 30px;
+  }
+}
+
+/* line 37, clever-template/core/_typography.scss */
+.template-heading-m {
+  color: #ffffff;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 0.9rem;
+  line-height: 1.1111111111;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media print {
+  /* line 37, clever-template/core/_typography.scss */
+  .template-heading-m {
+    color: #ffffff;
+  }
+}
+@media print {
+  /* line 37, clever-template/core/_typography.scss */
+  .template-heading-m {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 37, clever-template/core/_typography.scss */
+  .template-heading-m {
+    font-size: 24px;
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+@media print {
+  /* line 37, clever-template/core/_typography.scss */
+  .template-heading-m {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 37, clever-template/core/_typography.scss */
+  .template-heading-m {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 51, clever-template/core/_typography.scss */
+.template-heading-s {
+  color: #ffffff;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 0.8rem;
+  line-height: 1.25;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media print {
+  /* line 51, clever-template/core/_typography.scss */
+  .template-heading-s {
+    color: #ffffff;
+  }
+}
+@media print {
+  /* line 51, clever-template/core/_typography.scss */
+  .template-heading-s {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 51, clever-template/core/_typography.scss */
+  .template-heading-s {
+    font-size: 19px;
+    font-size: 0.95rem;
+    line-height: 1.3157894737;
+  }
+}
+@media print {
+  /* line 51, clever-template/core/_typography.scss */
+  .template-heading-s {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 51, clever-template/core/_typography.scss */
+  .template-heading-s {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 67, clever-template/core/_typography.scss */
+.template-caption-xl {
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  font-size: 18px;
+  font-size: 0.9rem;
+  line-height: 1.1111111111;
+  display: block;
+  margin-bottom: 5px;
+  color: #6f777b;
+}
+@media print {
+  /* line 67, clever-template/core/_typography.scss */
+  .template-caption-xl {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 67, clever-template/core/_typography.scss */
+  .template-caption-xl {
+    font-size: 27px;
+    font-size: 1.35rem;
+    line-height: 1.1111111111;
+  }
+}
+@media print {
+  /* line 67, clever-template/core/_typography.scss */
+  .template-caption-xl {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+/* line 77, clever-template/core/_typography.scss */
+.template-caption-l {
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  font-size: 18px;
+  font-size: 0.9rem;
+  line-height: 1.1111111111;
+  display: block;
+  margin-bottom: 5px;
+  color: #6f777b;
+}
+@media print {
+  /* line 77, clever-template/core/_typography.scss */
+  .template-caption-l {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 77, clever-template/core/_typography.scss */
+  .template-caption-l {
+    font-size: 24px;
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+@media print {
+  /* line 77, clever-template/core/_typography.scss */
+  .template-caption-l {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 77, clever-template/core/_typography.scss */
+  .template-caption-l {
+    margin-bottom: 0;
+  }
+}
+
+/* line 90, clever-template/core/_typography.scss */
+.template-caption-m {
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  font-size: 16px;
+  font-size: 0.8rem;
+  line-height: 1.25;
+  display: block;
+  color: #6f777b;
+}
+@media print {
+  /* line 90, clever-template/core/_typography.scss */
+  .template-caption-m {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 90, clever-template/core/_typography.scss */
+  .template-caption-m {
+    font-size: 19px;
+    font-size: 0.95rem;
+    line-height: 1.3157894737;
+  }
+}
+@media print {
+  /* line 90, clever-template/core/_typography.scss */
+  .template-caption-m {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+/* line 100, clever-template/core/_typography.scss */
+.template-body-l, .template-body-lead {
+  color: #ffffff;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  font-size: 18px;
+  font-size: 0.9rem;
+  line-height: 1.1111111111;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+@media print {
+  /* line 100, clever-template/core/_typography.scss */
+  .template-body-l, .template-body-lead {
+    color: #ffffff;
+  }
+}
+@media print {
+  /* line 100, clever-template/core/_typography.scss */
+  .template-body-l, .template-body-lead {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 100, clever-template/core/_typography.scss */
+  .template-body-l, .template-body-lead {
+    font-size: 24px;
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+@media print {
+  /* line 100, clever-template/core/_typography.scss */
+  .template-body-l, .template-body-lead {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 100, clever-template/core/_typography.scss */
+  .template-body-l, .template-body-lead {
+    margin-bottom: 30px;
+  }
+}
+
+/* line 112, clever-template/core/_typography.scss */
+.template-body-m, .template-body {
+  color: #ffffff;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  font-size: 16px;
+  font-size: 0.8rem;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media print {
+  /* line 112, clever-template/core/_typography.scss */
+  .template-body-m, .template-body {
+    color: #ffffff;
+  }
+}
+@media print {
+  /* line 112, clever-template/core/_typography.scss */
+  .template-body-m, .template-body {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 112, clever-template/core/_typography.scss */
+  .template-body-m, .template-body {
+    font-size: 19px;
+    font-size: 0.95rem;
+    line-height: 1.3157894737;
+  }
+}
+@media print {
+  /* line 112, clever-template/core/_typography.scss */
+  .template-body-m, .template-body {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 112, clever-template/core/_typography.scss */
+  .template-body-m, .template-body {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 124, clever-template/core/_typography.scss */
+.template-body-s {
+  color: #ffffff;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  font-size: 14px;
+  font-size: 0.7rem;
+  line-height: 1.1428571429;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media print {
+  /* line 124, clever-template/core/_typography.scss */
+  .template-body-s {
+    color: #ffffff;
+  }
+}
+@media print {
+  /* line 124, clever-template/core/_typography.scss */
+  .template-body-s {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 124, clever-template/core/_typography.scss */
+  .template-body-s {
+    font-size: 16px;
+    font-size: 0.8rem;
+    line-height: 1.25;
+  }
+}
+@media print {
+  /* line 124, clever-template/core/_typography.scss */
+  .template-body-s {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 124, clever-template/core/_typography.scss */
+  .template-body-s {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 136, clever-template/core/_typography.scss */
+.template-body-xs {
+  color: #ffffff;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  font-size: 12px;
+  font-size: 0.6rem;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media print {
+  /* line 136, clever-template/core/_typography.scss */
+  .template-body-xs {
+    color: #ffffff;
+  }
+}
+@media print {
+  /* line 136, clever-template/core/_typography.scss */
+  .template-body-xs {
+    font-family: American Typewriter, sans-serif;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 136, clever-template/core/_typography.scss */
+  .template-body-xs {
+    font-size: 14px;
+    font-size: 0.7rem;
+    line-height: 1.4285714286;
+  }
+}
+@media print {
+  /* line 136, clever-template/core/_typography.scss */
+  .template-body-xs {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+}
+@media (min-width: 38.9473684211em) {
+  /* line 136, clever-template/core/_typography.scss */
+  .template-body-xs {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 164, clever-template/core/_typography.scss */
+.template-body-l + .template-heading-l, .template-body-lead + .template-heading-l {
+  padding-top: 5px;
+}
+@media (min-width: 38.9473684211em) {
+  /* line 164, clever-template/core/_typography.scss */
+  .template-body-l + .template-heading-l, .template-body-lead + .template-heading-l {
+    padding-top: 10px;
+  }
+}
+
+/* line 172, clever-template/core/_typography.scss */
+.template-body-m + .template-heading-l, .template-body + .template-heading-l,
+.template-body-s + .template-heading-l {
+  padding-top: 15px;
+}
+@media (min-width: 38.9473684211em) {
+  /* line 172, clever-template/core/_typography.scss */
+  .template-body-m + .template-heading-l, .template-body + .template-heading-l,
+  .template-body-s + .template-heading-l {
+    padding-top: 20px;
+  }
+}
+
+/* line 178, clever-template/core/_typography.scss */
+.template-body-m + .template-heading-m, .template-body + .template-heading-m,
+.template-body-s + .template-heading-m,
+.template-body-m + .template-heading-s,
+.template-body + .template-heading-s,
+.template-body-s + .template-heading-s {
+  padding-top: 5px;
+}
+@media (min-width: 38.9473684211em) {
+  /* line 178, clever-template/core/_typography.scss */
+  .template-body-m + .template-heading-m, .template-body + .template-heading-m,
+  .template-body-s + .template-heading-m,
+  .template-body-m + .template-heading-s,
+  .template-body + .template-heading-s,
+  .template-body-s + .template-heading-s {
+    padding-top: 10px;
+  }
+}
+
+/* line 10, clever-template/helpers/_clearfix.scss */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 4, clever-template/utilities/_visually-hidden.scss */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* line 8, clever-template/utilities/_visually-hidden.scss */
+.visually-hidden-focusable {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+/* line 67, clever-template/helpers/_visually-hidden.scss */
+.visually-hidden-focusable:active, .visually-hidden-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  white-space: inherit !important;
+}
+
+/*# sourceMappingURL=clevertemplate.css.map */

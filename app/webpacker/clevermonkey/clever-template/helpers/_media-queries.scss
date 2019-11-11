@@ -1,0 +1,76 @@
+@import "../settings/layout";
+
+// Pass our breakpoints and static breakpoint definitions through to sass-mq.
+$mq-breakpoints: if(variable-exists(visual-breakpoints), $visual-breakpoints, ());
+
+$mq-show-breakpoints: ("mobile", "tablet", "desktop", "wide");
+
+$mq-responsive: true;
+
+// This is a horrible, horrible hack to prevent the 'dev mode' CSS to display
+// the current breakpoint from being included multiple times.
+//
+// We can't use the `exports` mixin for this because import directives cannot be
+// used within control directives 😠
+$sass-mq-already-included: false !default;
+
+@if $sass-mq-already-included {
+  $mq-show-breakpoints: ();
+}
+
+@import "../vendor/sass-mq";
+
+$sass-mq-already-included: true;
+
+
+
+// =========================================================
+// Helpers
+// =========================================================
+
+/// Media Query
+///
+/// This is a currently a wrapper for sass-mq - abstracted so that we can
+/// replace it in the future if we so choose.
+///
+/// @param {String | Boolean} $from [false] - One of $visual-breakpoints
+/// @param {String | Boolean} $until [false] - One of $visual-breakpoints
+/// @param {String | Boolean} $and [false] - Additional media query parameters
+/// @param {String} $media-type [all] - Media type: screen, print…
+///
+/// @ignore Undocumented mq API, for advanced use only:
+/// @ignore @param {Map} $breakpoints [visual-breakpoints]
+/// @ignore @param {String} $static-breakpoint [ct-ie8-breakpoint]
+/// @ignore @param {Boolean} $responsive [ct-is-ie8]
+///
+/// @content styling rules, wrapped into a @media query when $responsive is true
+///
+/// @example scss
+///  .element {
+///    @include ct-media-query($from: mobile) {
+///      color: red;
+///    }
+///    @include ct-media-query($until: tablet) {
+///      color: blue;
+///    }
+///    @include ct-media-query(mobile, tablet) {
+///      color: green;
+///    }
+///    @include ct-media-query($from: tablet, $and: '(orientation: landscape)') {
+///      color: teal;
+///    }
+///    @include ct-media-query(950px) {
+///      color: hotpink;
+///    }
+///    @include ct-media-query(tablet, $media-type: screen) {
+///      color: hotpink;
+///    }
+///  }
+///
+/// @access public
+
+@mixin ct-media-query($args...) {
+  @include mq($args...) {
+    @content;
+  };
+}

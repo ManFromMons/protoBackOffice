@@ -1,0 +1,190 @@
+@import "../settings/all";
+@import "../tools/all";
+@import "../helpers/all";
+
+@include ct-exports("ct/core/typography") {
+
+  // Headings
+
+  %template-heading-xl {
+    @include template-text-color;
+    @include template-font($size: 48, $weight: bold);
+
+    display: block;
+
+    margin-top: 0;
+    @include template-responsive-margin(8, "bottom");
+  }
+
+  .template-heading-xl {
+    @extend %template-heading-xl;
+  }
+
+  %template-heading-l {
+    @include template-text-color;
+    @include template-font($size: 36, $weight: bold);
+
+    display: block;
+
+    margin-top: 0;
+    @include template-responsive-margin(6, "bottom");
+  }
+
+  .template-heading-l {
+    @extend %template-heading-l;
+  }
+
+  %template-heading-m {
+    @include template-text-color;
+    @include template-font($size: 24, $weight: bold);
+
+    display: block;
+
+    margin-top: 0;
+    @include template-responsive-margin(4, "bottom");
+  }
+
+  .template-heading-m {
+    @extend %template-heading-m;
+  }
+
+  %template-heading-s {
+    @include template-text-color;
+    @include template-font($size: 19, $weight: bold);
+
+    display: block;
+
+    margin-top: 0;
+    @include template-responsive-margin(4, "bottom");
+  }
+
+  .template-heading-s {
+    @extend %template-heading-s;
+  }
+
+  // Captions to be used inside headings
+
+  .template-caption-xl {
+    @include template-font($size: 27);
+
+    display: block;
+
+    margin-bottom: template-spacing(1);
+
+    color: $template-secondary-text-colour;
+  }
+
+  .template-caption-l {
+    @include template-font($size: 24);
+
+    display: block;
+
+    margin-bottom: template-spacing(1);
+    color: $template-secondary-text-colour;
+
+    @include ct-media-query($from: tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  .template-caption-m {
+    @include template-font($size: 19);
+
+    display: block;
+
+    color: $template-secondary-text-colour;
+  }
+
+  // Body (paragraphs)
+
+  %template-body-l {
+    @include template-text-color;
+    @include template-font($size: 24);
+
+    margin-top: 0;
+    @include template-responsive-margin(6, "bottom");
+  }
+
+  .template-body-l {
+    @extend %template-body-l;
+  }
+
+  %template-body-m {
+    @include template-text-color;
+    @include template-font($size: 19);
+
+    margin-top: 0;
+    @include template-responsive-margin(4, "bottom");
+  }
+
+  .template-body-m {
+    @extend %template-body-m;
+  }
+
+  %template-body-s {
+    @include template-text-color;
+    @include template-font($size: 16);
+
+    margin-top: 0;
+    @include template-responsive-margin(4, "bottom");
+  }
+
+  .template-body-s {
+    @extend %template-body-s;
+  }
+
+  %template-body-xs {
+    @include template-text-color;
+    @include template-font($size: 14);
+
+    margin-top: 0;
+    @include template-responsive-margin(4, "bottom");
+  }
+
+  .template-body-xs {
+    @extend %template-body-xs;
+  }
+
+  // Usage aliases
+
+  // Using extend to alias means we also inherit any contextual adjustments that
+  // refer to the 'original' class name
+
+  .template-body-lead {
+    @extend %template-body-l;
+  }
+
+  .template-body {
+    @extend %template-body-m;
+  }
+
+  // Contextual adjustments
+  // Add top padding to headings that appear directly after paragraphs.
+
+  %template-body-l  + %template-heading-l {
+    padding-top: template-spacing(1);
+
+    @include ct-media-query($from: tablet) {
+      padding-top: template-spacing(2);
+    }
+  }
+
+  %template-body-m  + %template-heading-l,
+  %template-body-s  + %template-heading-l,
+  %template-list + %template-heading-l {
+    @include template-responsive-padding(4, "top");
+  }
+
+  %template-body-m + %template-heading-m,
+  %template-body-s + %template-heading-m,
+  %template-list + %template-heading-m,
+  %template-body-m + %template-heading-s,
+  %template-body-s + %template-heading-s,
+  %template-list + %template-heading-s {
+    padding-top: template-spacing(1);
+
+    @include ct-media-query($from: tablet) {
+      padding-top: template-spacing(2);
+    }
+  }
+}

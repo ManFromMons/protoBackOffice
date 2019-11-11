@@ -1,0 +1,30 @@
+/// Focusable helper
+///
+/// Provides an additional outline to clearly indicate when the target element is
+/// focused. Used for interactive elements which themselves have some background
+/// or border, such as most form elements.
+///
+/// @access public
+
+@mixin focusable {
+  &:focus {
+    outline: $ct-focus-width solid $ct-focus-colour;
+    outline-offset: 0;
+  }
+}
+
+/// Focusable with fill helper
+///
+/// Provides an additional outline and background colour to clearly indicate when
+/// the target element is focused. Used for interactive text-based elements such
+/// as links.
+///
+/// @access public
+
+@mixin focusable-fill {
+  &:focus {
+    outline: $ct-focus-width solid $ct-focus-colour;
+    outline-offset: 0;
+    background-color: $ct-focus-colour;
+  }
+}

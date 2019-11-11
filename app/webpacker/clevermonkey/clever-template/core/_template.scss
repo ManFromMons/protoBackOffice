@@ -1,0 +1,16 @@
+@import '../settings/all' ;
+@import '../tools/all' ;
+
+@include ct-exports("cleverTemplate/core/Template") {
+  // Applied to the HTML element
+  html.clever-template {
+    margin: $margin;
+    padding: 0;
+    font-family: $root-font-family;
+    font-size: $root-font-size;
+    font-weight: $root-font-weight-regular;
+    line-height: $root-line-height;
+    background-color: map-get($template-color-components,"background");
+    color: map-get($template-color-components, "text");
+  }
+}

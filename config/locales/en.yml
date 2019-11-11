@@ -1,0 +1,9 @@
+---
+en:
+  hello: Hello world
+  layouts:
+    application:
+      title: Candidate Bay
+    header-banner:
+      homepage_url: http://www.clevermonkey.co.uk
+  logo_alt_text: Candidate Bay logo

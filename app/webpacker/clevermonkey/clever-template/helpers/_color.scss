@@ -1,0 +1,60 @@
+@import "../settings/color";
+
+$theme-default-background-color: "white" !default ;
+$theme-default-panelbackground-color: "white" !default;
+$theme-default-text-color: "grey-1" !default;
+
+$template-color-components: (
+        "background": template-color($theme-default-background-color),
+        "panelbackground": color-tint(template-color($theme-default-panelbackground-color), 25),
+        "text": template-color($theme-default-text-color)
+);
+
+/// Get color
+///
+/// @param {String} $color - Name of color from the color palette
+///   (`$color-palette`)
+/// @return {color} Representation of named color
+/// @throw if `$color` is not a color from the color palette
+/// @access public
+@function template_component($type) {
+  $type: quote($type);
+
+  @if not map-has-key($template-color-components, $type) {
+    @error "Unknown color `#{$type}`";
+  }
+
+  @return map-get($template-color-components, $type);
+}
+
+@function template-color($color) {
+  $color: quote($color);
+
+  @if not map-has-key($color-palette, $color) {
+    @error "Unknown color `#{$color}`";
+  }
+
+  @return map-get($color-palette, $color);
+}
+
+/// Make a color darker by mixing it with black
+///
+/// @param {color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {color}
+/// @access public
+
+@function color-shade($color, $percentage) {
+  @return mix(template-color("black"), $color, $percentage);
+}
+
+/// Make a color lighter by mixing it with white
+///
+/// @param {color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {color}
+/// @access public
+
+@function color-tint($color, $percentage) {
+  @return mix(template-color("white"), $color, $percentage);
+}

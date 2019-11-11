@@ -1,0 +1,134 @@
+---
+require:
+  - rubocop-rspec
+  - './lib/cop/all'
+
+AllCops:
+    TargetRubyVersion: 2.6
+    Exclude:
+        - 'db/schema.rb'
+        - 'db/seeds.rb'
+        - 'bin/**/*'
+        - 'vendor/**/*'
+        - 'tmp/**/*'
+        - 'lib/tasks/supply_teachers/**/*'
+        - 'lib/tasks/management_consultancy/**/*'
+        - 'config/initializers/carrierwave.rb'
+
+Rails:
+    Enabled: true
+
+Bundler/OrderedGems:
+    Enabled: false
+
+Style/Alias:
+    Enabled: false
+
+Style/FrozenStringLiteralComment:
+    Enabled: false
+
+Style/NumericLiterals:
+    Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+    Enabled: true
+
+Style/TrailingCommaInHashLiteral:
+    Enabled: true
+
+Style/TrailingCommaInArguments:
+    Enabled: true
+
+Style/Documentation:
+    Enabled: false
+
+Style/DoubleNegation:
+    Enabled: false
+
+Style/WordArray:
+    Enabled: false
+
+Style/ClassAndModuleChildren:
+    Enabled: false
+
+Layout/EndOfLine:
+   EnforcedStyle: lf
+
+Layout/TrailingBlankLines:
+    Enabled: true
+
+Metrics/ClassLength:
+    Enabled: true
+
+Metrics/MethodLength:
+    Max: 50
+    Exclude:
+
+Metrics/AbcSize:
+    Max: 20
+    Exclude:
+        - 'spec/**/*'
+        - 'app/controllers/supply_teachers/branches_controller.rb'
+
+Metrics/LineLength:
+    Max: 132
+    Enabled: true
+    IgnoredPatterns:
+        - 'it .* do$'
+        - 'context .* do$'
+        - 'scenario .* do$'
+
+Metrics/BlockLength:
+    Max: 40
+    Exclude:
+        - 'spec/**/*'
+
+Metrics/ParameterLists:
+    Exclude:
+
+Migration/RequireUUIDPrimaryKeys:
+  Enabled: false
+  Include:
+    - 'db/migrate/*.rb'
+
+Migration/RequireLimitOnString:
+  Include:
+    - 'db/migrate/*.rb'
+
+RSpec/DescribeClass:
+    Exclude:
+        - 'spec/models/db_seeds_spec.rb'
+        - 'spec/views/**/*'
+        - 'spec/i18n_spec.rb'
+
+Capybara/FeatureMethods:
+    Exclude:
+        - 'spec/features/**/*'
+
+RSpec/MultipleExpectations:
+    Max: 3
+    Exclude:
+        - 'spec/features/**/*'
+
+RSpec/ExampleLength:
+    Max: 10
+    Exclude:
+        - 'spec/features/**/*'
+
+RSpec/NestedGroups:
+    Max: 4
+    Exclude:
+        - 'spec/**/journey_spec.rb'
+        - 'spec/**/branches_controller_spec.rb'
+
+RSpec/ContextWording:
+    Prefixes:
+      - when
+      - with
+      - without
+      - and
+
+Metrics/ModuleLength:
+    Exclude:
+        - 'spec/models/**/*'
+        - 'spec/controllers/**/*'

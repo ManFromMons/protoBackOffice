@@ -1,0 +1,19 @@
+<div class="header__container width-container">
+  <div class="header__logo">
+    <a href="<%= t('.homepage_url') %>" class="header__link header__link--homepage ga-crown-logo" aria-label="Candidate Bay homepage">
+            <span class="header__logotype">
+              <%= render partial: '/layouts/logotype' %>
+              <span class="header__logotype-text ccs-remove">Candiate Bay</span>
+            </span>
+    </a>
+  </div>
+
+  <div class="header__content">
+    <span class="header__link--service-name">Candidate Bay</span>
+    <button type="button" role="button" class="header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+    <nav>
+      <ul id="navigation" class="header__navigation " aria-label="Top Level Navigation">
+      </ul>
+    </nav>
+  </div>
+</div>
